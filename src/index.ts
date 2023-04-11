@@ -1,8 +1,9 @@
 import { expect as expectLib } from 'expect'
 
-import matchers from './matchers.js'
+import _matchers from './matchers.js'
 import { DEFAULT_OPTIONS } from './constants.js'
 
+export const matchers = _matchers;
 expectLib.extend({ ...matchers })
 export const expect = expectLib
 export const getConfig = (): any => DEFAULT_OPTIONS
